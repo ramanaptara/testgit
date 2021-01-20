@@ -4,26 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0; padding: 0;
-        }
-        body{
-            background: #000;
-        }
-        #wrapper{
-            max-width: 1564px;
-            margin: 0 auto;
-        }
-        img{
-            width: 100%;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="wrapper">
-       <a href="index.html"><img src="./images/contact.jpg" alt=""></a> 
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="hdrRgt">
+                <div class="animBnr">
+                    <img src="./images/animImg.gif" alt="">
+                </div>
+                <div class="hdrLinks">
+                    <div class="helpCntr">
+                        <img src="./images/helpCenter.png" alt="">
+                    </div>
+                    <div class="sclLnks">
+                        <ul>
+                            <li><a href="#"><img src="./images/icoFb.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/icoTwtr.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/icoIn.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/icoInsta.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li> 
+                            <li><a href="predictions.html">Predictions</a></li>
+                            <li><a href="pricing.html">Pricing</a></li> 
+                            <li><a href="blog.html" >Blog</a></li> 
+                            <li><a href="contact.html" class="select">Contact US</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <div class="contBnr">
+            <div class="contBnrLft">
+                <img src="./images/contact.jpg" alt="">
+            </div>
+            <div class="contBnrRgt">
+                <ul>
+                    <li>
+                        <div class="cntBox">
+                            <div class="iconSpc">
+                                <img src="./images/ico-2.png" alt="">
+                            </div>
+                            <h2>CONTACT ADDRESS</h2>
+                            <p>301 The Greenhouse, Custard Factory, London, E2 8DY.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cntBox">
+                            <div class="iconSpc">
+                                <img src="./images/ico-4.png" alt="">
+                            </div>
+                            <h2>LET'S TALK</h2>
+                            <p>10:00 AM to 8:00 PM</p>
+                            <div class="off">Sunday Off</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cntBox">
+                            <div class="iconSpc">
+                                <img src="./images/ico-3.png" alt="">
+                            </div>
+                            <h2>EMAIL US</h2>
+                            <p>
+                                <a href="#">support@moneytreesolution.com</a> 
+                                <a href="#">info@moneytreesolution.com</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cntBox">
+                            <div class="iconSpc">
+                                <img src="./images/ico-1.png" alt="">
+                            </div>
+                            <h2>WORKING HOURS</h2>
+                            <p>
+                                <span>9856487953</span>
+                                <span>8948564869</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contFormBox">
+            <h2>Request A Quote <span>inquiry FORM</span></h2>
+            <div class="contFrm">
+                <div class="frmFld">
+                    <div class="frmFldLft">Name</div>
+                    <div class="frmFldRgt">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="frmFld">
+                    <div class="frmFldLft">Mobile</div>
+                    <div class="frmFldRgt">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="frmFld">
+                    <div class="frmFldLft">Email</div>
+                    <div class="frmFldRgt">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="frmFld">
+                    <div class="frmFldLft">Message</div>
+                    <div class="frmFldRgtArea">
+                        <textarea placeholder=""></textarea>
+                    </div>
+                </div>
+                <div class="frmFld">
+                    <div class="frmFldLft"></div>
+                    <div class="frmFldRgtBtn">
+                        <input type="submit" value="Submit" class="submitBtn">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <footer>
+            <div class="rsrvdTxt">
+                <h2>Money Tree Solution. ALL RIGHTS RESERVED, 2020</h2>
+                <p>Football betting is fun, period. Whether it's a rousing victory or a crushing defeat but without some level of guidance and knowledge, football betting is a high risk venture. Everyday, football fans around the world are actively seeking for websites and platforms that offer accurate predictions and profits over the long term.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="ftrLnk">
+                <ul>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="ftrRgt">
+                <div class="ftrLogo">
+                    <img src="./images/ftrLogo.png" alt="">
+                </div>
+                <p>Football betting is fun, period. Whether it's a rousing victory or a crushing defeat but without some level of guidance and knowledge, football betting is a high risk venture. Everyday, football fans around the world.</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

@@ -4,26 +4,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0; padding: 0;
-        }
-        body{
-            background: #000;
-        }
-        #wrapper{
-            max-width: 1564px;
-            margin: 0 auto;
-        }
-        img{
-            width: 100%;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="wrapper">
-        <a href="pridiction.html"><img src="./images/index.jpg" alt=""></a> 
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="hdrRgt">
+                <div class="animBnr">
+                    <img src="./images/animImg.gif" alt="">
+                </div>
+                <div class="hdrLinks">
+                    <div class="helpCntr">
+                        <img src="./images/helpCenter.png" alt="">
+                    </div>
+                    <div class="sclLnks">
+                        <ul>
+                            <li><a href="#"><img src="./images/icoFb.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/icoTwtr.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/icoIn.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/icoInsta.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="select">Home</a></li> 
+                            <li><a href="predictions.html">Predictions</a></li>
+                            <li><a href="pricing.html">Pricing</a></li> 
+                            <li><a href="blog.html" >Blog</a></li> 
+                            <li><a href="contact.html" >Contact US</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="banner">
+            <img src="./images/bnr-1.jpg" alt="">
+        </div>
+        <div class="greyBox">
+            <div class="helpSprt">
+                <h2>Help Support :-</h2>
+                <ul>
+                    <li>
+                        <span><img src="./images/ico-1.png" alt=""></span> 
+                        <strong>10:00 AM to 8:00 PM <i>Sunday Off</i></strong>
+                    </li>
+                    <li>
+                        <span><img src="./images/ico-2.png" alt=""></span> 
+                        <strong>FCA 5298, Malviya Nagar, Delhi 121001</strong>
+                    </li>
+                    <li>
+                        <span><img src="./images/ico-3.png" alt=""></span> 
+                        <strong>
+                            <a href="mailto:support@moneytreesolution.com">support@moneytreesolution.com</a> 
+                            <a href="mailto:support@moneytreesolution.com">info@moneytreesolution.com</a>
+                        </strong>
+                    </li>
+                    <li>
+                        <span><img src="./images/ico-4.png" alt=""></span>
+                        <strong>9856487953 | 8948564869</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="prdBox">
+                <table>
+                    <caption>Today Predictions</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Time</th>
+                        <th scope="col">Sports</th>
+                        <th scope="col">Teams</th>
+                        <th scope="col">TIP</th>
+                        <th scope="col">Predict Score</th>
+                        <th scope="col">Accuracy % </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="time">14:30</td>
+                        <td data-label="sports">Football</td>
+                        <td data-label="teams"><span><img src="./images/ind-flag.png" alt=""></span>Ind vs <span><img src="./images/eng-flag.png" alt=""></span> Aus</td>
+                        <td data-label="tip">1X</td>
+                        <td data-label="score">180 - 160</td>
+                        <td data-label="accuracy">25%</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="time">14:30</td>
+                        <td data-label="sports">Football</td>
+                        <td data-label="teams"><span><img src="./images/ind-flag.png" alt=""></span>Ind vs <span><img src="./images/eng-flag.png" alt=""></span> Aus</td>
+                        <td data-label="tip">1X</td>
+                        <td data-label="score">180 - 160</td>
+                        <td data-label="accuracy">25%</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="time">14:30</td>
+                        <td data-label="sports">Football</td>
+                        <td data-label="teams"><span><img src="./images/ind-flag.png" alt=""></span>Ind vs <span><img src="./images/eng-flag.png" alt=""></span> Aus</td>
+                        <td data-label="tip">1X</td>
+                        <td data-label="score">180 - 160</td>
+                        <td data-label="accuracy">25%</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="time">14:30</td>
+                        <td data-label="sports">Football</td>
+                        <td data-label="teams"><span><img src="./images/ind-flag.png" alt=""></span>Ind vs <span><img src="./images/eng-flag.png" alt=""></span> Aus</td>
+                        <td data-label="tip">1X</td>
+                        <td data-label="score">180 - 160</td>
+                        <td data-label="accuracy">25%</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="time">14:30</td>
+                        <td data-label="sports">Football</td>
+                        <td data-label="teams"><span><img src="./images/ind-flag.png" alt=""></span>Ind vs <span><img src="./images/eng-flag.png" alt=""></span> Aus</td>
+                        <td data-label="tip">1X</td>
+                        <td data-label="score">180 - 160</td>
+                        <td data-label="accuracy">25%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <div class="upcoming">
+            <div class="upcomingBox">
+                <h2>UPCOMING MATCHES</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                <ul>
+                    <li>
+                       <div class="upMatch">
+                            <div class="dateBox">26 Feb, 2021</div>
+                            <h3>Semi Final <span>Champions League</span></h3>
+                            <h2><span><img src="./images/flag-1.png" alt=""></span> <strong>India</strong></h2>
+                            <div class="vsTxt">Vs</div>
+                            <h2><span><img src="./images/flag-2.png" alt=""></span> <strong>Australia </strong></h2>    
+                       </div>
+                    </li>
+                    <li>
+                        <div class="upMatch">
+                             <div class="dateBox">26 Feb, 2021</div>
+                             <h3>Semi Final <span>Champions League</span></h3>
+                             <h2><span><img src="./images/flag-1.png" alt=""></span> <strong>India</strong></h2>
+                             <div class="vsTxt">Vs</div>
+                             <h2><span><img src="./images/flag-2.png" alt=""></span> <strong>Australia </strong></h2>    
+                        </div>
+                     </li>
+                </ul>
+            </div>
+        </div>
+        <div class="offersBg">
+            <div class="ofrHdng">our offers</div>
+            <ul>
+                <li>
+                    <div class="ofrTxt">
+                        <h2>Expert Advicor</h2>
+                        <p>This Plan is reserved for customers who need a personal expert that will guide them through a complete analysis of match selectons with minimal risk to make a meaningful profit:</p>
+                        <div class="offrIcon"><img src="./images/offrIcon.png" alt=""></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ofrTxt">
+                        <h2>Expert Advicor</h2>
+                        <p>This Plan is reserved for customers who need a personal expert that will guide them through a complete analysis of match selectons with minimal risk to make a meaningful profit:</p>
+                        <div class="offrIcon"><img src="./images/offrIcon.png" alt=""></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="newsBox">
+            <div class="newsHdng">
+                <h2>OUR LATEST NEWS <span>Latest news and updates from our blog</span></h2>
+            </div>
+            <div class="newsList">
+                <ul>
+                    <li>
+                        <div class="newsImg">
+                            <div class="dateBox">
+                                <strong>5</strong>
+                                <span>AUG</span>
+                            </div>
+                            <img src="./images/img-5.jpg" alt="">
+                        </div>
+                        <div class="newsDlt">
+                            <h2>How to Make Money in Pro Sports </h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesett repetinjected humour, or non-characteristic words here. </p>
+                        </div>
+                        <div class="newsMore">
+                            <a href="#">Read More</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="newsImg">
+                            <div class="dateBox">
+                                <strong>5</strong>
+                                <span>AUG</span>
+                            </div>
+                            <img src="./images/img-6.jpg" alt="">
+                        </div>
+                        <div class="newsDlt">
+                            <h2>How to Make Money in Pro Sports </h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesett repetinjected humour, or non-characteristic words here. </p>
+                        </div>
+                        <div class="newsMore">
+                            <a href="#">Read More</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="newsImg">
+                            <div class="dateBox">
+                                <strong>5</strong>
+                                <span>AUG</span>
+                            </div>
+                            <img src="./images/img-7.jpg" alt="">
+                        </div>
+                        <div class="newsDlt">
+                            <h2>How to Make Money in Pro Sports </h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesett repetinjected humour, or non-characteristic words here. </p>
+                        </div>
+                        <div class="newsMore">
+                            <a href="#">Read More</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="rsrvdTxt">
+                <h2>Money Tree Solution. ALL RIGHTS RESERVED, 2020</h2>
+                <p>Football betting is fun, period. Whether it's a rousing victory or a crushing defeat but without some level of guidance and knowledge, football betting is a high risk venture. Everyday, football fans around the world are actively seeking for websites and platforms that offer accurate predictions and profits over the long term.</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="ftrLnk">
+                <ul>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="ftrRgt">
+                <div class="ftrLogo">
+                    <img src="./images/ftrLogo.png" alt="">
+                </div>
+                <p>Football betting is fun, period. Whether it's a rousing victory or a crushing defeat but without some level of guidance and knowledge, football betting is a high risk venture. Everyday, football fans around the world.</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
