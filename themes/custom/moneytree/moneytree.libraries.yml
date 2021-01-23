@@ -1,0 +1,16 @@
+global-styling:
+  version: VERSION
+  js:
+    common/js/imagesloaded.pkgd.min.js: {}
+    common/js/masonry.pkgd.min.js: {}
+    common/js/owl.carousel.min.js: {}
+    common/js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+  css:
+    theme:
+      common/css/owl.carousel.min.css: {}
+      common/css/owl.css: {}
+      common/css/style.css: {}

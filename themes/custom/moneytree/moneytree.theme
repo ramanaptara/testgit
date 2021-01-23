@@ -1,0 +1,26 @@
+<?php
+
+
+function moneytree_preprocess_page(&$variables) {
+//  die('test');
+//print_r(drupal_get_user_timezone());
+//echo date('Y-m-d H:i:s');
+//die;
+
+// Applying my custom format.
+//$date = \Drupal::service('date.formatter')->format($date, 'custom', 'Y-m-d H:i:s', drupal_get_user_timezone());
+// Printing to see the output.
+//dpm($date);
+}
+
+/**
+ * Implements hook_theme_suggestions_container_alter().
+ */
+function moneytree_theme_suggestions_container_alter(array &$suggestions, array $element)
+{
+    if (isset($element['element'][0]) && $element['element'][0]["#theme"]) {
+        foreach ($element['element'][0]["#theme"] as $them_item) {
+            $suggestions[] = 'container__' . $them_item;
+        }
+    }
+}
