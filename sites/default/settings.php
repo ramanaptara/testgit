@@ -804,6 +804,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 if (isset($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR']) && file_exists($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR'] . '/loc_testing1_dd.inc')) {
   require $_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR'] . '/loc_testing1_dd.inc';
 }
+$config['system.logging']['error_level'] = 'verbose';
 // </DDSETTINGS>
 $databases['default']['default'] = array (
   'database' => 'moneytree',
@@ -814,4 +815,4 @@ $databases['default']['default'] = array (
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
- 
+ );
