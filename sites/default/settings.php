@@ -806,12 +806,12 @@ if (isset($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR']) && file_exists($_SERVER['D
 }
 // </DDSETTINGS>
 $databases['default']['default'] = array (
-  'database' => 'testing1',
+  'database' => 'moneytree',
   'username' => 'root',
-  'password' => '',
+  'password' => 'wifi@786',
   'prefix' => '',
-  'host' => '127.0.0.1',
-  'port' => '33067',
+  'host' => '172.20.0.2',
+  'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
-);
+ 
