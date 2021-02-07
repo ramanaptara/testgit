@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}{% set counter = 0 %}
+<div class="topBnr">
+<div class="carousel-wrap">
+  <div class="owl-carousel">
+{% for row in rows %}
+    {% set slider_desktop_img = file_url(row['content']['#row']._entity.field_home_desktop_image.entity.fileuri) %} 
+    {% set slide_url = row['content']['#row']._entity.field_page_link.0.url %} 
+    {% set slider_link_uri = row.content['#view'].style_plugin.render_tokens[ counter ]['{{ field_page_link }}']|render|striptags|trim %}
+    {% set slider_mobile_img = file_url(row['content']['#row']._entity.field_home_mobile_image.entity.fileuri) %} 
+    <div class="item">
+    {% if slide_url is not empty %}
+        <a href="{{slide_url}}">
+    {% endif %}
+
+            <div class="dtable">
+                <picture>
+                    <source srcset="{{slider_mobile_img}}" media="(max-width: 767px)">
+                    <source srcset="{{slider_desktop_img}}">
+                    <img alt="" src="{{slider_desktop_img}}">
+                </picture>
+            </div> 
+    {% if slide_url is not empty %}
+        </a>
+    {% endif %}
+
+    </div>
+    {% set counter = counter + 1 %}
+{% endfor %}
+ </div>
+  </div>
+  </div>
