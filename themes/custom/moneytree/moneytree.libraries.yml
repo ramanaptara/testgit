@@ -2,7 +2,6 @@ global-styling:
   version: VERSION
   js:
     common/js/imagesloaded.pkgd.min.js: {}
-    common/js/masonry.pkgd.min.js: {}
     common/js/owl.carousel.min.js: {}
     common/js/script.js: {}
   dependencies:

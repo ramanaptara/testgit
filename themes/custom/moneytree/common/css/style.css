@@ -15,6 +15,7 @@
 }
 img{
     display: block;
+    max-width: 100%;
 }
 a{
     text-decoration: none;
@@ -31,6 +32,7 @@ textarea:focus{
     margin: 0 auto;
     width: 100%;
     max-width: 1364px;
+    overflow: hidden;
 }
 header{
     width: 100%;
@@ -116,10 +118,19 @@ header .hdrRgt .hdrLinks nav ul li a.select{
 
 .greyBox .region {
     display: flex;
+    width: 100%;
+}
+.greyBox .region .views-element-container{
+    width: 100%;
+}
+.greyBox .region .view-empty{
+    color: #fff;
+    text-align: center;
 }
 
 .helpSprt{
     background: url(../images/helpBg.jpg) 0 0 no-repeat;
+    background-size: 100%;
     width: 559px;
     height: 311px;
     padding: 20px;
@@ -149,6 +160,7 @@ header .hdrRgt .hdrLinks nav ul li a.select{
     color: #fff;
     font-size: 16px;
     font-weight: 600;
+	display: flex;
 }
 .helpSprt ul li strong i{
     font-style: normal;
@@ -158,7 +170,7 @@ header .hdrRgt .hdrLinks nav ul li a.select{
 .helpSprt ul li strong a{
     color: #fff;
     display: block;
-    padding: 2px 0px;
+    padding: 2px 5px;
 }
 
 .predBox{
@@ -175,7 +187,7 @@ header .hdrRgt .hdrLinks nav ul li a.select{
     justify-content: center;
 }
 .predBoxRgt{
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -188,7 +200,8 @@ header .hdrRgt .hdrLinks nav ul li a.select{
     margin-left: 20px;
 }
 
-.greyBox .prdBox .view-header{
+.greyBox .prdBox .view-header,
+.todayPrd .prdBox .view-header{
     font-size: 1.5em;
     padding: 10px;
     background-color: #32b946;
@@ -247,6 +260,7 @@ header .hdrRgt .hdrLinks nav ul li a.select{
   .upcmngPrd .prdBox table td span{
       display: inline-block;
       margin: 0 5px;
+      width: 20px;
   }
   .greyBox .prdBox table td:nth-child(3),
   .todayPrd .prdBox table td:nth-child(3),
@@ -259,42 +273,52 @@ header .hdrRgt .hdrLinks nav ul li a.select{
   .greyBox .prdBox table th,
   .todayPrd .prdBox table th,
   .upcmngPrd .prdBox table th {
-    font-size: .85em;   
+    font-size: 12px;   
     text-transform: uppercase;
     color: #31b448;
   }
   .upcmngPrd .prdBox table th {
     color: #000000;
   }
-  .greyBox .prdBox table th:nth-child(1),
-  .todayPrd .prdBox table th:nth-child(1),
-  .upcmngPrd .prdBox table th:nth-child(1) {
+  .greyBox .prdBox table th:nth-child(1) {
       width: 10%;
   }
-  .greyBox .prdBox table th:nth-child(2),
-  .todayPrd .prdBox table th:nth-child(2),
-  .upcmngPrd .prdBox table th:nth-child(2) {
-    width: 20%;
+  .greyBox .prdBox table th:nth-child(2){
+    width: 10%;
   }
-.greyBox .prdBox table th:nth-child(3),
-.todayPrd .prdBox table th:nth-child(3),
-.upcmngPrd .prdBox table th:nth-child(3){
-    width: 25%;
+.greyBox .prdBox table th:nth-child(3){
+    width: 35%;
 }
-.greyBox .prdBox table th:nth-child(4),
-.todayPrd .prdBox table th:nth-child(4),
-.upcmngPrd .prdBox table th:nth-child(4) {
+.greyBox .prdBox table th:nth-child(4){
     width: 10%;
 }
-.greyBox .prdBox table th:nth-child(5),
-.todayPrd .prdBox table th:nth-child(5),
-.upcmngPrd .prdBox table th:nth-child(5) {
+.greyBox .prdBox table th:nth-child(5){
     width: 20%;
 }
-.greyBox .prdBox table th:nth-child(6),
-.todayPrd .prdBox table th:nth-child(6),
-.upcmngPrd .prdBox table th:nth-child(6) {
+.greyBox .prdBox table th:nth-child(6) {
     width: 15%;
+}
+
+.todayPrd .prdBox table th:nth-child(1){
+	width: 10%;
+}
+.todayPrd .prdBox table th:nth-child(2){
+	width: 10%;
+}
+.todayPrd .prdBox table th:nth-child(3){
+	width: 10%;
+}
+.todayPrd .prdBox table th:nth-child(4){
+	width: 30%;
+}
+.todayPrd .prdBox table th:nth-child(5){
+	width: 10%;
+}
+.todayPrd .prdBox table th:nth-child(6){
+	width: 15%;
+}
+.todayPrd .prdBox table th:nth-child(7){
+	width: 15%;
 }
 
 .upcoming{
@@ -798,9 +822,33 @@ footer .ftrRgt .ftrLogo{
 }
 .contFormBox .contFrm .frmFld{
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     align-items: center;
     position: relative;
+}
+
+.contFormBox .contFrm .form-actions{
+	text-align: center;
+}
+.contFormBox .contFrm .form-actions input{
+	    background: #febb10;
+    color: #fff;
+    text-transform: uppercase;
+    height: 36px;
+    line-height: 36px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    width: 130px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+}
+.contFormBox .contFrm .form-actions input:hover{
+	    background: #d79f0f;
 }
 
 .contFormBox .contFrm .frmFld .frmFldLft{
@@ -808,11 +856,26 @@ footer .ftrRgt .ftrLogo{
     font-size: 16px;
     color: #fff;
 }
-.contFormBox .contFrm .frmFld .frmFldRgt{
+.contFormBox .contFrm .frmFld .frmFldRgt,
+.contFormBox .contFrm .frmFld .form-textarea-wrapper{
     flex: 1;
     height: 50px;
     background: #161616;
+    position: relative;
 }
+.contFormBox .contFrm .frmFld .form-textarea-wrapper{
+    height: 100px;
+}
+
+.contFormBox .contFrm .frmFld .frmFldRgt label.error,
+.contFormBox .contFrm .frmFld .form-textarea-wrapper label.error{
+    position: absolute;
+    top: -18px;
+    left: 0;
+    color: red;
+    font-size: 11px;
+}
+
 .contFormBox .contFrm .frmFld .frmFldRgtBtn{
     flex: 1;
     height: 50px;
@@ -833,6 +896,8 @@ footer .ftrRgt .ftrLogo{
     width: 100%;
     height: 100px;
     background: #161616;
+    border: none;
+    resize: none;
 }
 .contFormBox .contFrm .frmFld .frmFldRgtArea textarea{
     width: 100%;
@@ -844,7 +909,11 @@ footer .ftrRgt .ftrLogo{
     font-size: 14px;
     padding: 15px;
 }
-.contFormBox .contFrm .frmFld .frmFldRgtBtn .submitBtn{
+.frmFldRgtBtn {
+    text-align: center;
+}
+
+.frmFldRgtBtn .submitBtn{
     background: #febb10;
     color: #fff;
     text-transform: uppercase;
@@ -861,7 +930,7 @@ footer .ftrRgt .ftrLogo{
     margin-top: 10px;
     transition: all 0.5s ease;
 }
-.contFormBox .contFrm .frmFld .frmFldRgtBtn .submitBtn:hover{
+.frmFldRgtBtn .submitBtn:hover{
     background: #d79f0f;
 }
 
@@ -955,16 +1024,14 @@ footer .ftrRgt .ftrLogo{
 .pricingBox ul li h3{
     text-align: center;
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif; 
     letter-spacing: 1px;
 }
 .pricingBox ul li span{
     display: block;
-    font-size: 14px;
     text-transform: none;
-    font-weight: normal;
     letter-spacing: 0;
     margin-right: 10px;
 }
@@ -1094,20 +1161,382 @@ header .hdrRgt .hdrLinks nav ul li.menu-item{
     padding: 0;
 }
 
+/*header .hdrRgt .hdrLinks nav ul li.menu-item:last-child{
+    display: none;
+}*/
+
 .topBnr .carousel-wrap{
     margin: 0;
     width: 100%;
     padding: 0;
 }
 
+.site-logo{
+    display: block;
+    margin-top: 20px;
+}
+
+header .hdrRgt .hdrLinks nav .mblMenu{
+    display: none;
+}
+
+.blogBox .grid .view-content{
+    display: flex;
+    justify-content: space-between;
+}
+.blogBox .grid .view-content .grid-item{
+    width: 32%;
+}
+.blogBox .view-filters {
+    margin: 10px 0 20px 0;
+}
+.blogBox .view-filters form .form--inline{
+    display: flex;
+    justify-content: center;
+}
+.blogBox .view-filters form .form--inline label{
+    color: #fff;
+    font-size: 18px;
+    padding-right: 10px;
+}
+.blogBox .view-filters form .form--inline input[type=text]{
+    font-size: 14px;
+    padding: 2px;
+    color: #000;
+    height: 36px;
+}
+.blogBox .view-filters form .form-actions input[type=submit]{
+    background: #febb10;
+    text-transform: uppercase;
+    height: 36px;
+    line-height: 36px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    width: 130px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ease;
+}
+.blogBox .view-filters form .form-actions input[type=submit]:hover {
+    background: #d79f0f;
+}
+.blogBox nav.pager {
+    margin: 20px 0;
+}
+
+.blogBox nav.pager li.is-active{
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.blogBox nav.pager .pager__items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blogBox nav.pager .pager__items .pager__item{
+    padding: 0 10px;
+}
+.blogBox nav.pager .pager__items .pager__item a{
+    color: #fff;
+}
+.blogBox nav.pager .pager__items .pager__item span{
+    font-size: 28px;
+    line-height: 0;
+}
+
+.prdBox form .form--inline{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prdBox form .form-actions input{
+	background: #febb10;
+    color: #fff;
+    text-transform: uppercase;
+    height: 36px;
+    line-height: 36px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    width: 130px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ease;
+}
+.prdBox form .form-actions input:hover{
+	background: #d79f0f;
+}
+.prdBox form label{
+	text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+	font-size: 16px;
+}
+.prdBox form .js-form-item{
+	margin: 0 20px 0 0;
+}
+
+.ftrLnk ul.menu a.is-active{
+	color: #32b946;
+}
+
 @media screen and (max-width: 1400px) {
     header .hdrRgt{
         width: 65%;
     }
+    
+    
 }
 
+@media screen and (max-width: 1100px) {
+    header .hdrRgt{
+        width: auto;
+    }
+    header .hdrRgt .animBnr {
+        margin: 20px 0 0 0;
+    }
+    header .hdrRgt .hdrLinks nav ul li {
+        font-size: 12px;
+    }
+    .helpSprt ul li strong {
+        font-size: 12px;
+    }
+    .helpSprt h2 {
+        font-size: 16px;
+    }
+    .offersBg ul li .ofrTxt p {
+        font-size: 12px;
+    }
+    .offersBg ul li .ofrTxt h2 {
+        font-size: 18px;
+    }
+    .offersBg ul li:nth-child(1),
+    .offersBg ul li:nth-child(2){
+        background-size: 200px;
+    }
+    .offersBg .ofrHdng {
+        padding-top: 18px;
+        font-size: 18px;
+        background-size: 100%;
+        width: 150px;
+        height: 55px;
+    }
+    .newsBox .newsHdng h2 {
+        font-size: 18px;
+    }
+    .newsBox .newsHdng h2 span{
+        font-size: 12px;
+    }
+    .newsBox .newsList ul li{
+        width: 32%;
+    }
+    footer .rsrvdTxt p,
+    footer .ftrRgt p {
+        font-size: 11px;
+    }
+    footer .rsrvdTxt h2 {
+        font-size: 12px;
+    }
+    .helpSprt{
+        width: 100%;
+        height: 300px;
+    }
+    .greyBox .region div:nth-child(1){
+        flex: 1;
+    }
+    .greyBox .region div:nth-child(2){
+        flex: 1.7;
+    }
+    .greyBox .prdBox .view-header {
+        font-size: 18px;
+    }
+    .contBnr .contBnrRgt ul li .cntBox{
+        width: 90%;
+    }
+    .contBnr .contBnrRgt ul li .cntBox p {
+        font-size: 12px;
+        padding: 5px 0;
+        line-height: 16px;
+    }
+    .contBnr .contBnrRgt ul li .cntBox h2{
+        font-size: 12px;
+    }
+    .contBnr .contBnrRgt ul li .cntBox .iconSpc {
+        margin-bottom: 5px;
+    }   
+    .contFormBox .contFrm .frmFld .frmFldRgt{
+        height: 40px;
+    }
+    .contFormBox .contFrm .frmFld .frmFldLft{
+        font-size: 14px;
+    }
+    .blgBox .blgImg .blgdateBox{
+        width: 40px;
+        height: 60px;
+    }
+    .blgBox .blgImg .blgdateBox strong{
+        font-size: 24px;
+    }
+    .blgBox .blgImg .blgdateBox span{
+        font-size: 12px;
+    }
+	.pricingBox h2{
+		width: 100%;
+	}
+	.pricingBox h2 span{
+		font-size:12px;
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+    header .hdrRgt .region-header-center-top{
+        display: none;
+    }
+    
+    header .hdrRgt .hdrLinks .region-header-top{
+        display: none;
+    }
+    .site-logo {
+        margin-top: 5px;
+    }
+    .site-logo img {
+        width: 70px;
+    }
+    header{
+        background: url(../images/bnrImg.jpg) 100% no-repeat;
+        height: 70px;
+    }
+    header .hdrRgt .hdrLinks nav ul.menu{
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        margin: 0;
+        width: 50%;
+        background: #000;
+        padding: 5px 0;
+        transition: all 0.5s ease;
+    }
+    header .hdrRgt .hdrLinks nav ul.menu.open{
+        right: 0;
+    }
+    
+    header .hdrRgt .hdrLinks nav ul li{
+        border: none;
+        border-top: 1px solid #fff;
+    }
+    header .hdrRgt .hdrLinks nav ul li.menu-item:last-child{
+        display: block;
+    }
+    header .hdrRgt .hdrLinks nav ul li:nth-child(1){
+        border: none;
+    }
+    header .hdrRgt .hdrLinks nav ul li a{
+        display: block;
+        padding: 8px 10px;
+    }
+    header{
+        padding: 0 10px;
+        position: relative;
+        z-index: 2;
+    }
+    header .hdrRgt .hdrLinks nav .mblMenu{
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: red;
+        background: url(../images/mblmenu.png) 0 0 no-repeat; 
+        margin-top: 20px;
+    }
+    header .hdrRgt .hdrLinks nav .mblMenu.active{
+        background: url(../images/menuClose.png) 0 0 no-repeat; 
+    }
+    .greyBox .region{
+        flex-direction: column;
+    }
+    .greyBox .prdBox{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .greyBox .prdBox table td{
+        font-size: 12px;
+    }
+    .offersBg{
+        padding: 20px;
+    }
+    .offersBg ul li{
+        width: 49%;
+    }
+    .offersBg ul li:nth-child(1), 
+    .offersBg ul li:nth-child(2) {
+        background-size: 150px;
+        height: 270px;
+    }
+    .offersBg ul li .ofrTxt{
+        width: 65%;
+    }
+    .newsBox .newsList ul li .newsImg .dateBox{
+        width: 40px;
+        height: 50px;
+    }
+    .newsBox .newsList ul li .newsImg .dateBox strong{
+        font-size: 18px;
+    }
+    .newsBox .newsList ul li .newsImg .dateBox span{
+        height: 25px;
+        font-size: 11px;
+    }
+    .contBnr{
+        flex-direction: column;
+    }
+    .contBnr .contBnrLft{
+        margin: 0 0 10px 0;
+    }
+    .contBnr .contBnrLft img{
+        width: 100%;
+    }
+    .contBnr .contBnrRgt ul li{
+        height: 150px;
+    }
+    .contBnr{
+        margin: 0;
+    }
+    .contFormBox{
+        margin: 10px 0;    
+    }
+    .blogBox h2 {
+        font-size: 18px;
+    }
+    .blogBox h2 span {
+        font-size: 12px;
+    }
+	.pricingBox ul li h3{
+		font-size:14px
+	}
+	.pricingBox ol {
+		margin: 10px;
+	}
+	.predBoxLft{
+		display:none;
+	}
+	.predBoxRgt{
+		justify-content: flex-start;
+	}
+	.todayPrd .prdBox{
+		margin-left: 0;
+		
+	}
+}
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 760px) {
     .greyBox .prdBox table,
     .todayPrd .prdBox table,
     .upcmngPrd .prdBox table {
@@ -1147,26 +1576,230 @@ header .hdrRgt .hdrLinks nav ul li.menu-item{
       border-bottom: 1px solid #ddd;
       display: block;
       font-size: .8em;
-      text-align: right;
+      text-align: left;
     }
     
     .greyBox .prdBox table td::before,
     .todayPrd .prdBox table td::before,
     .upcmngPrd .prdBox table td::before {
-      /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
-      content: attr(data-label);
+      /* content: attr(data-label); */
       float: left;
       font-weight: bold;
       text-transform: uppercase;
+      width: 25%;
+      padding-left: 10px;
     }
+    .greyBox .prdBox table td:nth-child(3),
+	.todayPrd .prdBox table td:nth-child(3){
+        justify-content: flex-start;
+    }
+
+    .greyBox .prdBox table td:nth-child(1)::before{
+        content: 'TIME';
+    }
+    .greyBox .prdBox table td:nth-child(2)::before{
+        content: 'SPORTS';
+    }
+    .greyBox .prdBox table td:nth-child(3)::before{
+        content: 'TEAMS';
+    }
+    .greyBox .prdBox table td:nth-child(4)::before{
+        content: 'TIP';
+    }
+    .greyBox .prdBox table td:nth-child(5)::before{
+        content: 'PREDICT SCORE';
+    }
+    .greyBox .prdBox table td:nth-child(6)::before{
+        content: 'ACCURACY (%)';
+    }
+	
+	
+	
+	
+	.todayPrd  .prdBox table td:nth-child(1)::before{
+        content: 'DATE';
+    }
+    .todayPrd .prdBox table td:nth-child(2)::before{
+        content: 'TIME';
+    }
+    .todayPrd .prdBox table td:nth-child(3)::before{
+        content: 'SPORTS';
+    }
+    .todayPrd .prdBox table td:nth-child(4)::before{
+        content: 'TEAMS';
+    }
+    .todayPrd .prdBox table td:nth-child(5)::before{
+        content: 'TIP';
+    }
+    .todayPrd .prdBox table td:nth-child(6)::before{
+        content: 'PREDICT';
+    }
+	.todayPrd .prdBox table td:nth-child(7)::before{
+        content: 'ACCURACY (%)';
+    }
+	
+	
     
     .greyBox .prdBox table td:last-child,
     .todayPrd .prdBox table td:last-child,
     .upcmngPrd .prdBox table td:last-child {
       border-bottom: 0;
     }
+
+    .offersBg ul li:nth-child(1), .offersBg ul li:nth-child(2) {
+        background-size: 100px;
+    }
+    .offersBg ul li .ofrTxt {
+        width: 100%;
+    }
+    .offersBg ul li .ofrTxt .offrIcon{
+        width: 40px;
+    }
+    .greyBox .prdBox table td:nth-child(3){
+
+    }
+    .offersBg ul li:nth-child(1){
+        background-position: 5% 100%;
+    }
+    .offersBg ul li:nth-child(2){
+        background-position: 90% 100%;
+    }
+    .newsBox .newsList ul li:nth-child(3){
+        display: none;
+    }
+    .newsBox .newsList ul li {
+        width: 48%;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer .region-footer-first,
+    footer .ftrLnk,
+    footer .region-footer-third {
+        width: 100%;
+    }
+    footer .ftrLnk{
+        padding: 30px 0 20px 0;
+    }
+    .newsBox{
+        padding: 20px;
+    }
+    .contFormBox .contFrm{
+        width: 90%;
+    }
+    .contFormBox h2{
+        font-size: 18px;
+    }
+    .contFormBox h2 span{
+        font-size: 12px;
+    }
+    .contBnr .contBnrRgt ul li .cntBox .off{
+        font-size: 12px;
+    }
+    .blgBox{
+        padding: 10px;
+    }
+    .blogBox .grid .view-content{
+        flex-wrap: wrap;
+    }
+    .blogBox .grid .view-content .grid-item {
+        width: 48%;
+        margin-top: 40px;
+    }
+    .blogBox .view-filters form .form--inline label {
+        font-size: 14px;
+    }
+	.pricingBox{
+		padding: 10px;
+	}
   }
 
+  @media screen and (max-width: 500px) {
+    .greyBox {
+        padding: 10px;
+    }
+    .offersBg {
+        padding: 10px;
+    }
+    .offersBg ul li{
+        align-items: flex-start;
+    }
+    .offersBg ul li:nth-child(1), 
+    .offersBg ul li:nth-child(2){
+        height: 300px;
+    }
+    .greyBox .prdBox table td::before,
+	.todayPrd .prdBox table td::before{
+        width: 40%;
+    }
+    .offersBg ul li .ofrTxt{
+        padding: 10px;
+    }
+    header .hdrRgt .hdrLinks nav ul.menu{
+        width: 100%;
+    }
+    header {
+        background: #000;
+    }
+    .contFormBox .contFrm{
+        padding: 10px;
+    }
+    .contFormBox .contFrm .frmFld{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contFormBox .contFrm .frmFld .frmFldRgt, 
+    .contFormBox .contFrm .frmFld .form-textarea-wrapper{
+        width: 100%;
+    }
+    .contFormBox .contFrm .frmFld .frmFldRgt label.error, 
+    .contFormBox .contFrm .frmFld .form-textarea-wrapper label.error{
+        top: 100%;
+    }
+    .blogBox{
+        padding: 10px;
+    }
+    .blogBox .view-filters form .form--inline{
+        flex-direction: column;
+    }
+    .blogBox .view-filters form .form--inline .form-item,
+    .blogBox .view-filters form .form--inline .form-actions {
+        text-align: center;
+    }
+	
+	.newsBox .newsList ul li{
+		padding: 10px;
+	}
+	.newsBox .newsList ul li .newsImg .dateBox{
+		width: 35px;
+	}
+	.newsBox .newsList ul li .newsImg .dateBox{
+		right: 5px;
+	}
+	.newsBox .newsList ul li .newsImg .dateBox strong{
+		font-size: 14px;
+	}
+    .pricingBox ul{
+		display: block;
+	}
+	.pricingBox ul li{
+		width: 100%
+	}
+	.pricingBox ul li:nth-child(1) .prFst{
+		display: none
+	}
+	.pricingBox ul li h3 {
+		font-size: 18px;
+		padding: 10px 10px;
+	}
+	.pricingBox ul li:nth-child(2){
+		margin: 20px 0;
+	}
+	.pricingBox ul li:nth-child(3) .prFst{
+		display: none
+	}
+	.pricingBox h2 {
+		font-size: 18px;
+	}
+
+  }

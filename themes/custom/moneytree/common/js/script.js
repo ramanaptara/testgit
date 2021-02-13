@@ -23,10 +23,20 @@
 	  }
 	});
 	
-	$(".grid").imagesLoaded(function() {
-		$(".grid").masonry({
-		  itemSelector: ".grid-item"
-		});
-	  });
+
+$('.mblMenu').click(function(){
+	if($(this).hasClass('active')){
+		$('ul.menu').removeClass('open');
+		$(this).removeClass('active');
+	} else{
+		$('ul.menu').addClass('open');
+		$(this).addClass('active');
+	}
+
+	
+});
+		 
   
 })(jQuery);
+
+
